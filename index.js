@@ -1,5 +1,5 @@
 /*const { db } = require("./cnn");*/
-require('dotenv').config()
+const { PORT }= require('./config')
 /*db.any('select * from pizza').then(res=>{console.table(res)})*/
 const cors = require('cors')
 const express = require('express')
@@ -17,6 +17,6 @@ app.use(cors({ origin: true, credentials: true  }));
 app.use(require('./routes/index'))
 
 //execution server web
-app.listen(process.env.PORT)
+app.listen(PORT)
 console.log("Server running in http://localhost:3003")
 app.get('/',(req,res)=>{res.send('Bienvenidos al servicio Rest-Api-Pizza')})
