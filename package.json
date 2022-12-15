@@ -1,0 +1,17 @@
+{
+  "name": "02-api-rest-pizza",
+  "version": "1.0.0",
+  "description": "Construcción API-REST-PIZZA ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Edison Guaichico",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "pg-promise": "^10.11.1"
+  }
+}
