@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { getPizzas, getPizzasByName, postCreatePizza, putUpdatePizza, deletePizza, getIngredients, postCreateIngredients, putUpdateIngredients, deleteIngredients, getPizzaIngredients, postCreatePizzaIngredients, getIngredientByPizza, getPizzaWithIngredients, getPizzasIngredientsByPizzaId, deletePizzaIngredients } = require("../controller/pizza.controller");
+const { getPizzas, getPizzasByName, postCreatePizza, putUpdatePizza, deletePizza, getIngredients,  getIngredientsByName, postCreateIngredients, putUpdateIngredients, deleteIngredients, getPizzaIngredients, postCreatePizzaIngredients, getIngredientByPizza, getPizzaWithIngredients, getPizzasIngredientsByPizzaId, deletePizzaIngredients } = require("../controller/pizza.controller");
 
 const router= Router()
 router.get("/pizzas",getPizzas)
@@ -10,6 +10,7 @@ router.delete("/pizzas",deletePizza)
 router.get("/pizzasWithIngredients",getPizzaWithIngredients)
 //ingredients
 router.get("/ingredients",getIngredients)
+router.get("/ingredients/:name", getIngredientsByName)
 router.post("/ingredients",postCreateIngredients)
 router.put("/ingredients",putUpdateIngredients)
 router.delete("/ingredients",deleteIngredients)

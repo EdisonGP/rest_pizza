@@ -7,7 +7,7 @@ const getPizzas =async (req,res)=>{
 
 const getPizzasByName =async (req,res)=>{
     const name=req.params.name
-    const response = await db.any(`select * from pizza  where piz_state=true and piz_name=$1`,[name])
+    const response = await db.any(`select * from pizza  where piz_state=true and piz_id=$1`,[name])
     res.json(response)
 }
 
@@ -47,6 +47,11 @@ const deletePizza =async (req,res)=>{
 //Ingredients services
 const getIngredients =async (req,res)=>{
     const response = await db.any('select * from ingredient where ing_state=true;')
+    res.json(response)
+}
+const getIngredientsByName =async (req,res)=>{
+    const name=req.params.name
+    const response = await db.any(`select * from ingredient  where ing_state=true and ing_id=$1`,[name])
     res.json(response)
 }
 
@@ -152,6 +157,7 @@ module.exports={
     putUpdateIngredients,
     deleteIngredients,
     getPizzaIngredients,
+    getIngredientsByName,
     getPizzaWithIngredients,
     postCreatePizzaIngredients,
     getPizzasIngredientsByPizzaId,
