@@ -6,18 +6,18 @@ router.get("/pizzas",getPizzas)
 router.get("/pizzas/:name",getPizzasByName)
 router.post("/pizzas",postCreatePizza)
 router.put("/pizzas",putUpdatePizza)
-router.delete("/pizzas",deletePizza)
+router.delete("/pizzas/:id",deletePizza)
 router.get("/pizzasWithIngredients",getPizzaWithIngredients)
 //ingredients
 router.get("/ingredients",getIngredients)
 router.get("/ingredients/:name", getIngredientsByName)
 router.post("/ingredients",postCreateIngredients)
 router.put("/ingredients",putUpdateIngredients)
-router.delete("/ingredients",deleteIngredients)
+router.delete("/ingredients/:id",deleteIngredients)
 //pizza ingredients
 router.get("/pizzas_ingredients",getPizzaIngredients)
 router.post("/pizzas_ingredients",postCreatePizzaIngredients)
 router.get("/pizzas_ingredients/:id",getPizzasIngredientsByPizzaId)
-router.delete("/pizzas_ingredients",deletePizzaIngredients)
+router.delete("/pizzas_ingredients/:id",deletePizzaIngredients)
 
 module.exports=router

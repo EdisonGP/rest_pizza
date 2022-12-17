@@ -34,7 +34,7 @@ const putUpdatePizza =async (req,res)=>{
 }
 
 const deletePizza =async (req,res)=>{
-    const {piz_id}=req.query
+    const piz_id=req.params.piz_id
     const response = await db.any(`UPDATE pizza set piz_state=false where piz_id=$1`,[piz_id])
     res.json({
         message:'Pizza ELIMINADA correctamente',
@@ -79,7 +79,7 @@ const putUpdateIngredients =async (req,res)=>{
 }
 
 const deleteIngredients =async (req,res)=>{
-    const {ing_id}=req.query
+    const ing_id=req.params.ing_id
     const response = await db.any(`UPDATE ingredient set ing_state=false where ing_id=$1`,[ing_id])
     res.json({
         message:'Ingredients eliminado correctamente',
@@ -136,7 +136,7 @@ const getPizzasIngredientsByPizzaId =async (req,res)=>{
 }
 
 const deletePizzaIngredients =async (req,res)=>{
-    const {piz_ing_id}=req.query
+    const piz_ing_id=req.params.piz_ing_id
     const response = await db.any(`UPDATE pizza_ingredient SET piz_ing_state=false where piz_ing_id=$1`,[piz_ing_id])
     res.json({
         message:'Pizza Ingredients eliminado correctamente',
