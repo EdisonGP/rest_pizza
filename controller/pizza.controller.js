@@ -35,6 +35,7 @@ const putUpdatePizza =async (req,res)=>{
 
 const deletePizza =async (req,res)=>{
     const piz_id=req.params.piz_id
+    console.log(piz_id);
     const response = await db.any(`UPDATE pizza set piz_state=false where piz_id=$1`,[piz_id])
     res.json({
         message:'Pizza ELIMINADA correctamente',
