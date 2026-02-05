@@ -9,3 +9,9 @@
 ✅ **Arquitectura escalable**
 
 ✅ **Documentación completa**
+
+Este proyecto está licenciado bajo la **MIT License** - consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+**Desarrollado por Edison Guaichico** - [Perfil de GitHub](https://github.com/EdisonGP)
